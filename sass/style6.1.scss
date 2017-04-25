@@ -1,0 +1,359 @@
+$block-font-family:verdana;
+$block-font-size:28px;
+$headers-font-family:calibri light;
+$headers-font-size:42px;
+$text-register:uppercase;
+$assetPath:"../content";
+$image-width:50%;
+
+.wrapper{
+  @media screen and (min-width: 1390px){
+    width:1390px;
+  }
+
+  @media screen and (min-width: 1024px) and (max-width: 1390px) {
+    width:1024px;
+  }
+  @media screen and (min-width: 720px) and (max-width: 1024px){
+    width:720px;
+  }
+  margin: 0 auto;
+}
+
+.about,.why_organic,.traditional,.meat,.menu,.reservations,.tea{
+  font-family:$block-font-family;
+  font-size:$block-font-size;
+}
+
+h1,h2,.our_food{
+  font-family:$headers-font-family;
+  font-size:$headers-font-size;
+  text-transform:$text-register;
+}
+
+.about {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  align-items: center;
+  margin-bottom: 245px;
+  @media screen and (min-width: 1024px) and (max-width: 1390px) {
+    margin-bottom: 0px;
+  }
+  @media screen and (min-width: 720px) and (max-width: 1024px) {
+    flex-wrap: wrap;
+    margin-bottom: 100px;
+  }
+
+  img {
+    width: $image-width;
+  }
+}
+
+.why_organic,.traditional,.our_food{
+  @extend .about;
+}
+
+.our_food{
+  margin-bottom: 215px;
+  background-image: url(#{$assetPath}/our_food.jpg);
+  justify-content: flex-end;
+  @media screen and (min-width: 1024px) and (max-width: 1390px) {
+    background-size: contain;
+    margin-bottom: 75px;
+  }
+  @media screen and (min-width: 720px) and (max-width: 1024px){
+    background-size: contain;
+    margin-bottom: 75px;
+  }
+  div {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: stretch;
+    margin: 275px 0px 275px 0px;
+    line-height: 50px;
+    width:40%;
+    @media screen and (min-width: 1024px) and (max-width: 1390px) {
+      margin: 170px 0px 170px 0px;
+    }
+    @media screen and (min-width: 720px) and (max-width: 1024px){
+      margin: 82px 0px 82px 0px;
+    }
+  }
+}
+
+.about_text,.organic_text,.traditional_text{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  h2{
+    margin:0px auto 0px;
+    @media screen and (min-width: 720px) and (max-width: 1024px){
+      margin:40px auto 0px;
+    }
+  }
+  p{
+    margin:105px 82px 0px 82px;
+    line-height: 40px;
+    @media screen and (min-width: 1024px) and (max-width: 1390px) {
+      margin:50px 40px 0px 40px;
+    }
+    @media screen and (min-width: 720px) and (max-width: 1024px){
+      margin:40px 82px 0px 82px;
+      width:50%;
+    }
+  }
+  .sign{
+    margin: 30px 30px 0px 82px;
+    @media screen and (min-width: 1024px) and (max-width: 1390px) {
+      margin: 30px 30px 0px 40px;
+    }
+    @media screen and (min-width: 720px) and (max-width: 1024px){
+      margin: 30px 30px 0px 40px;
+      width:50%;
+    }
+  }
+}
+
+.meat{
+  display: flex;
+  justify-content: flex-end;
+  background-image: url(#{$assetPath}/meat.jpg);
+  margin-bottom: 215px;
+  @media screen and (min-width: 1024px) and (max-width: 1390px) {
+    background-size: 100% 100%;
+    margin:40px 0px 75px 0px;
+  }
+  @media screen and (min-width: 720px) and (max-width: 1024px){
+    background-size: 100% 100%;
+    margin:40px 0px 75px 0px;
+  }
+  .meat_text {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: stretch;
+    margin: 70px;
+    padding: 110px 82px 100px 82px;
+    line-height: 40px;
+    width:28%;
+    background: rgba(97,95,94,0.7);
+    @media screen and (min-width: 1024px) and (max-width: 1390px) {
+      padding: 40px 20px 40px 20px;
+      width:50%;
+    }
+    @media screen and (min-width: 720px) and (max-width: 1024px) {
+      padding: 40px 20px 40px 20px;
+      width:70%;
+    }
+    h2 {
+      color: white;
+      margin: 0;
+      text-align: center;
+    }
+    p {
+      font-family: $block-font-family;
+      font-size: $block-font-size;
+      color: white;
+      margin: 105px 0px 0px 0px;
+      @media screen and (min-width: 1024px) and (max-width: 1390px) {
+        margin: 50px 0px 0px 0px;
+      }
+      @media screen and (min-width: 720px) and (max-width: 1024px) {
+        margin: 50px 0px 0px 0px;
+      }
+    }
+  }
+}
+
+.menu{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  h2{
+    margin-bottom: 50px;
+  }
+  p{
+    margin: 0px 0px 50px 0px;
+    @extend .menu;
+    line-height: 45px;
+    @media screen and (min-width: 1024px) and (max-width: 1390px) {
+      margin: 0px 0px 30px 0px;
+    }
+    @media screen and (min-width: 720px) and (max-width: 1024px) {
+      margin: 0px 0px 30px 0px;
+    }
+  }
+  hr{
+    width: 14.4%;
+    margin-bottom: 50px;
+  }
+  div{
+    @extend .menu;
+    p{
+      width: 78%;
+      text-align: center;
+    }
+    span{
+      display: inline-block;
+      margin-bottom: 50px;
+    }
+  }
+}
+
+.table{
+  margin-bottom: 215px;
+  @media screen and (min-width: 1024px) and (max-width: 1390px) {
+    margin-bottom: 100px;
+  }
+  @media screen and (min-width: 720px) and (max-width: 1024px) {
+    margin-bottom: 100px;
+  }
+  img{
+    width: 100%;
+  }
+}
+
+.reservations{
+  @extend .menu;
+  margin-bottom: 215px;
+  @media screen and (min-width: 1024px) and (max-width: 1390px) {
+    margin-bottom: 100px;
+  }
+  @media screen and (min-width: 720px) and (max-width: 1024px) {
+    margin-bottom: 100px;
+  }
+  h2{
+    margin: 0px 0px 45px 0px;
+    }
+  p{
+    margin: 0px 0px 80px 0px;
+  }
+  button{
+    border: black 8px solid;
+    font-family: $headers-font-family;
+    font-size: $headers-font-size;
+    background: white;
+    text-transform: $text-register;
+    padding: 35px 65px 35px 65px;
+  }
+}
+button{
+  cursor: pointer;
+}
+link{
+  cursor: pointer;
+}
+
+.tea{
+  @extend .meat;
+  background-image: url(#{$assetPath}/tea_bag.jpg);
+  .tea_text {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: stretch;
+    margin: 90px 67px 90px 67px;
+    padding: 115px 88px 140px 92px;
+    line-height: 40px;
+    width: 29%;
+    background: rgba(26,26,26,0.7);
+    @media screen and (min-width: 1024px) and (max-width: 1390px) {
+      padding: 40px 20px 40px 20px;
+      width:50%;
+    }
+    @media screen and (min-width: 720px) and (max-width: 1024px) {
+      padding: 40px 20px 40px 20px;
+      width:70%;
+    }
+    h2 {
+      color: white;
+      margin: 0;
+      text-align: center;
+    }
+    p {
+      font-family: $block-font-family;
+      font-size: $block-font-size;
+      color: white;
+      margin: 105px 0px 0px 0px;
+    }
+  }
+}
+
+.contacts{
+  @extend .menu;
+  p,hr{
+    margin-bottom: 45px;
+    @media screen and (min-width: 1024px) and (max-width: 1390px) {
+      margin-bottom: 30px;
+    }
+    @media screen and (min-width: 720px) and (max-width: 1024px) {
+      margin-bottom: 30px;
+    }
+  }
+}
+
+.join_text{
+  @extend h2;
+  width: 71%;
+  text-align: center;
+}
+
+.subscribe{
+  width:880px;
+  height:125px;
+  border: 9px black solid;
+  margin-bottom: 215px;
+  @media screen and (min-width: 1024px) and (max-width: 1390px) {
+    width:880px;
+    height:125px;
+    margin-bottom: 75px;
+  }
+  @media screen and (min-width: 720px) and (max-width: 1024px) {
+    width:750px;
+    height:100px;
+    margin-bottom: 75px;
+  }
+  input[type="text"]{
+    width: 70%;
+    height: 100%;
+    border: 0;
+    padding: 0px 0px 0px 34px;
+    font-size: $block-font-size;
+    color:black;
+  }
+  input[value="Subscribe"]{
+    width: 25%;
+    font-family: $block-font-family;
+    font-size: $block-font-size;
+    background: white;
+    padding: 20px 0px 20px 0px;
+    border: 0;
+    border-left: 1px black solid;
+    text-align: center;
+    cursor: pointer;
+    @media screen and (min-width: 720px) and (max-width: 1024px) {
+      width: 24%;
+    }
+  }
+}
+
+footer{
+  width: 100%;
+  background: black;
+  text-align: center;
+  font-family: $block-font-family;
+  font-size: $block-font-size;
+  color: #ffffff;
+  padding:85px 0px 85px 0px;
+  @media screen and (min-width: 1024px) and (max-width: 1390px) {
+    padding:55px 0px 55px 0px;
+  }
+  @media screen and (min-width: 720px) and (max-width: 1024px) {
+    padding:30px 0px 30px 0px;
+  }
+}
